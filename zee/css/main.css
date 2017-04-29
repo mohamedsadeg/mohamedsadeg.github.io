@@ -1,0 +1,186 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+  margin: 0;
+  font-family: Verdana,sans-serif;
+  color:#fff;
+  background: #000;
+  opacity: 0;
+  font-weight:300;
+}
+
+
+/* ==== */
+/* GRID */
+/* ==== */
+.row{
+  display: flex;
+  align-items: baseline;
+}
+.col-12{
+  text-align: center;
+  width: 100%;
+}
+.col-6{
+  width: 50%;
+  padding: 0 1%;
+}
+.col-6:first-child{
+  text-align: right;
+}
+
+
+/* ====== */
+/* GLOBAL */
+/* ====== */
+p{
+  font-size: 18px;
+  line-height: 1.2;
+}
+strong{
+  font-size: 80px;
+  color:#ff7900;
+  font-weight: 900;
+  display: inline-block;
+}d
+
+
+/* ====== */
+/* CANVAS */
+/* ====== */
+canvas{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+
+/* ======= */
+/* EMAKINA */
+/* ======= */
+.emakina{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.emakina svg{
+  width: 130px;
+  height: 70px;
+  fill:white;
+}
+
+/* ===== */
+/* INTRO */
+/* ===== */
+.intro{
+  position: absolute;
+  top: 162px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  max-width: 100%;
+}
+.start{
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #FFF;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: none;
+  font-family: Verdana,sans-serif;
+}
+.start span{
+   display: inline-block;
+   vertical-align: middle;
+   margin-left: 10px;
+}
+.start svg{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.start svg path{
+  fill : #ff7900;
+  transition: .2s ease-out;
+  transform-origin: 7.5px 7.5px;
+}
+.start:hover path:nth-child(1){
+  transform:  translateX(7px) rotate(-45deg);
+}
+.start:hover path:nth-child(2){
+  transform:  translateX(7px) rotate(45deg);
+}
+/* ===== */
+/* OUTRO */
+/* ===== */
+.outro{
+  position: absolute;
+  top: 162px;
+  left:50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+
+@media (min-height:770px){
+  .start{
+    margin-top: 100px;
+  }
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .intro, .outro{
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width:900px){
+  .row{
+    flex-wrap: wrap;
+  }
+  .intro, .outro{
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    transform:none;
+    height: calc(100% - 70px);
+    overflow: auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .col-6{
+    width: 100%;
+    text-align: center;
+  }
+  .col-6:first-child{
+    text-align: center;
+  }
+  .start{
+    margin-top: 30px;
+  }
+  strong{
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .emakina{
+    bottom: 20px;
+  }
+  .emakina svg{
+    height: 35px;
+  }
+}
